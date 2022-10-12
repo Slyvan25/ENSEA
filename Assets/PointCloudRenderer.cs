@@ -74,7 +74,8 @@ public class PointCloudRenderer : MonoBehaviour
             for (int i = 0; i < ships[ship].Data.Count; i++)
             {
                 positions.Add(ships[ship].Data[i]);
-                colors.Add(ships[ship].LayerColor);
+                // colors.Add(ships[ship].LayerColor);
+                colors.Add(new Color(Random.value, Random.value, Random.value));
             }
         }
 
@@ -82,9 +83,15 @@ public class PointCloudRenderer : MonoBehaviour
 
         for (int i = 0; i < particles.Length; ++i)
         {
-            Vector3 xyzCalculated = Quaternion.AngleAxis(positions[1].Longitude, -Vector3.up) * Quaternion.AngleAxis(positions[1].Latitude, -Vector3.right) * new Vector3(0, 0, 1);
-            pointPositions.Add(xyzCalculated);
-            //pointPositions.Add(new Vector3(positions[i].Longitude, positions[i].Bedlevel, positions[i].Latitude));
+            Vector3 calculated = new Vector3(
+                    MathF.Cos(positions[i].Latitude) * MathF.Cos(positions[i].Longitude) * kRadiusOfEarth,
+                    MathF.Cos(positions[i].Latitude) * MathF.Sin(positions[i].Longitude) * kRadiusOfEarth,
+                    MathF.Sin(positions[i].Latitude) * kRadiusOfEarth
+                );
+                
+            // pointPositions.Add(calculated);
+            // pointPositions.Add(new Vector3(positions[i].Longitude, positions[i].Bedlevel, positions[i].Latitude));
+            // pointPositions.Add(new Vector3(positions[i].Longitude, (float)positions[i].Heigth, positions[i].Latitude));
         }
 
         SetParticles(pointPositions, colors);

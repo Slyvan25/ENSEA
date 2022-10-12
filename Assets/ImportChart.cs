@@ -37,7 +37,7 @@ public class ImportChart : MonoBehaviour
                             }
                         )
                         .GroupBy(ship => ship.ShipId)
-                        .Select(groupedShipScans => new ShipData { Ship = groupedShipScans.Key, Data = groupedShipScans.ToList(), LayerColor = Random.ColorHSV() })
+                        .Select(groupedShipScans => new ShipData { Ship = groupedShipScans.Key, Data = groupedShipScans.ToList(), LayerColor = new Color(Random.value, Random.value, Random.value) })
                         .ToList();
 
             debugText.text = "Parsed the file to a readable list..";

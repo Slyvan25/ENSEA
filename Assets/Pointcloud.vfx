@@ -224,7 +224,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614606}
   - {fileID: 8926484042661614610}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661614605}
   m_MasterData:
@@ -233,7 +233,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.AABox, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"center":{"x":0.0,"y":0.0,"z":0.0},"size":{"x":1.0,"y":1.0,"z":1.0}}'
+      m_SerializableObject: '{"center":{"x":0.0,"y":0.0,"z":0.0},"size":{"x":1000.0,"y":1000.0,"z":1000.0}}'
     m_Space: 0
   m_Property:
     name: bounds
@@ -728,7 +728,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614619}
   - {fileID: 8926484042661614630}
   dataType: 0
-  capacity: 5000000
+  capacity: 10000
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
@@ -885,7 +885,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":10307,"guid":"0000000000000000f000000000000000","type":0}}'
+      m_SerializableObject: 
     m_Space: 2147483647
   m_Property:
     name: mainTexture
@@ -2716,7 +2716,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -1115, y: 672}
+  m_UIPosition: {x: -1115, y: 696}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
